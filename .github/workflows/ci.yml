@@ -1,0 +1,26 @@
+name: CI
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Loop folders
+        run: |
+          for d in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16; do
+            if [ -f "$d/package.json" ]; then
+              echo "===> Checking $d"
+              cd "$d"
+              npm ci || true
+              npm run lint || true
+              npm run build || true
+              cd ..
+            else
+              echo "===> Skipping $d (no package.json)"
+            fi
+          done

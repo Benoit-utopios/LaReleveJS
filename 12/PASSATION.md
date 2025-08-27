@@ -1,0 +1,13 @@
+# PASSATION
+
+## Ce qui a été fait pendant cette étape
+- …
+
+## Ce qui reste à faire / priorités
+- …
+
+## Choix / hypothèses faites
+- …
+
+## Problèmes connus
+- …
