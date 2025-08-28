@@ -1,0 +1,277 @@
+ html {
+            font-size: 62.5%; /* 1rem = 10px */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            padding: 2rem 0;
+            box-shadow: 0 .2rem .4rem rgba(0,0,0,0.1);
+            display:none;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* Main content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .newsletter-container {
+            background: white;
+            padding: 6rem 4rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 .8rem 3.2rem rgba(0,0,0,0.1);
+            max-width: 60rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .newsletter-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+            line-height: 1.3;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            border: .2rem solid #e9ecef;
+            border-radius: .8rem;
+            font-size: 1.6rem;
+            transition: all 0.3s ease;
+            min-width: 25rem;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 .3rem rgba(99, 102, 241, 0.1);
+        }
+
+        .email-input::placeholder {
+            color: #9ca3af;
+        }
+
+        .submit-btn {
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            border-radius: .8rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-.2rem);
+            box-shadow: 0 .8rem 2.5rem rgba(99, 102, 241, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .privacy-text {
+            font-size: 1.4rem;
+            color: #6b7280;
+            margin-top: 2rem;
+        }
+        .error-message {
+            color: #dc2626;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+            text-align: left;
+            display: none;
+        }
+
+        .email-input.error {
+            border-color: #dc2626;
+            box-shadow: 0 0 0 .3rem rgba(220, 38, 38, 0.1);
+        }
+
+        .privacy-link {
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .privacy-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Modale styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(.4rem);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 4rem;
+            border-radius: 1.6rem;
+            box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+            max-width: 50rem;
+            width: 90%;
+            position: relative;
+            animation: modalSlideIn 0.4s ease-out;
+            text-align: center;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(-2rem);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            font-size: 2.4rem;
+            cursor: pointer;
+            color: #9ca3af;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            color: #374151;
+            background-color: #f3f4f6;
+        }
+
+        .modal-text {
+            font-size: 2rem;
+            color: #2c3e50;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: .1rem solid #e5e7eb;
+            display:none;
+        }
+
+        footer p {
+            font-size: 1.4rem;
+            color: #6b7280;
+        }
+
+
+        @media (max-width: 768px) {
+            .newsletter-container {
+                padding: 4rem 2rem;
+                margin: 2rem;
+            }
+
+            .newsletter-title {
+                font-size: 2.4rem;
+                margin-bottom: 2rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .email-input {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .submit-btn {
+                width: 100%;
+                padding: 1.8rem 2rem;
+            }
+
+            .modal-content {
+                padding: 3rem 2rem;
+                margin: 2rem;
+            }
+
+            .modal-text {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .newsletter-title {
+                font-size: 2rem;
+            }
+
+            header h1 {
+                display: hidden;
+            }
+        }

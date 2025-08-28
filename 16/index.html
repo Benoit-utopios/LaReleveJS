@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de mémoire</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+  <h1>Jeu de mémoire</h1>
+
+  <!-- Zone des infos joueur -->
+  <div class="infos">
+    <p>Temps : <span id="time">0</span> sec</p>
+    <p>Tentatives : <span id="tries">0</span></p>
+    <button id="restart">Nouvelle partie</button>
+  </div>
+
+  <!-- Plateau de jeu avec 24 cartes (12 paires) -->
+  <!-- Avec le JavaScript, il faudra mélanger les cartes de façon aléatoire à chaque nouvelle partie.
+     Les paires ne doivent pas forcément être placées côte à côte comme dans ce code HTML de départ. -->
+
+  <div class="game-board">
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/1.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/1.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/2.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/2.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/3.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/3.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/4.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/4.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/5.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/5.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/6.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/6.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/7.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/7.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/8.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/8.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/9.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/9.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/10.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/10.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/11.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/11.jpg" alt=""></div>
+
+    
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/12.jpg" alt=""></div>
+    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/12.jpg" alt=""></div>
+
+  </div>
+
+  <!-- Message de victoire -->
+<!-- Ce message doit rester caché au début et ne s’affiche qu’à la fin de la partie -->
+  <div class="message" id="victory-message">
+    Bravo ! Vous avez gagné !
+  </div>
+
+</body>
+</html>

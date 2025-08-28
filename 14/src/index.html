@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h1><span class="title">Task</span>Flow</h1>
+    <main>
+        <div class="board">
+
+            <div class="list">
+                <h2>À faire</h2>
+                <div class="cards"></div>
+                <button class="add-card">+ Ajouter une tâche</button>
+            </div>
+
+
+
+            <div class="list">
+                <h2>En cours</h2>
+
+                <button class="add-card">+ Ajouter une tâche</button>
+            </div>
+
+
+            <div class="list">
+                <h2>Terminé</h2>
+
+                <button class="add-card">+ Ajouter une tâche</button>
+            </div>
+        </div>
+    </main>
+    <span class="title--mid">Organisez vos tâches, libérez votre esprit !</span>
+</body>
+<script>
+    document.querySelectorAll('.add-card').forEach(button => {
+        button.addEventListener('click', () => {
+            const list = button.parentElement;
+            const cardsContainer = list.querySelector('.cards');
+
+            const taskText = prompt("Nom de la tâche :");
+            if (!taskText) return;
+
+
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+            <span>${taskText}</span>
+            <button class="delete">x</button>
+        `;
+
+
+            card.querySelector('.delete').addEventListener('click', () => {
+                card.remove();
+            });
+
+            cardsContainer.appendChild(card);
+        });
+    });
+</script>
+
+</html>

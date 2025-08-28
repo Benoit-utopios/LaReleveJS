@@ -1,0 +1,136 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f0f0f0;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .logo {
+        text-align: center;
+        flex: 1;
+    }
+
+    .logo h1 {
+        margin-bottom: 5px;
+    }
+
+    .hero {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .search-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(138,138,138,0.7);
+        padding: 30px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .search-box h2 {
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    .search-box input[type="text"] {
+        width: 75%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .search-box button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: orange;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .tabs-section {
+        background-color: #e6e6e6;
+        padding: 40px 50px;
+        text-align: center;
+    }
+
+    .tabs-section h2 {
+        margin-bottom: 10px;
+    }
+
+    .tabs-section p {
+        margin-bottom: 20px;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+        position: relative;
+        border-bottom: 2px solid #000;
+    }
+
+.tabs a{
+  position: relative;          /* nécessaire pour le pseudo-élément */
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border-top-left-radius: 8px;   /* arrondi haut gauche */
+  border-top-right-radius: 8px;  /* arrondi haut droit */
+}
+
+.tabs a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;    
+  color: orange;           /* épaisseur de la ligne */
+  background-color: orange;  /* couleur de la ligne */
+  border-top-left-radius: 8px;  /* pour arrondir un peu les bords de la ligne */
+  border-top-right-radius: 8px;
+}
+.tabs a.active{
+    color: orange;
+}
+
+

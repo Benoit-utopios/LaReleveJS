@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Tracker <span class="logo">🍿</span></h1>
+    </header>
+
+    <main>
+    <!-- Menu latéral -->
+        <aside class="sidebar">
+        <nav>
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#">Films à voir</a></li>
+                <li><a href="#">Films déjà vus</a></li>
+                <li><a href="#">Tous les films</a></li>
+                <li><a href="#">Genres</a></li>
+            </ul>
+        </nav>
+        </aside>
+
+    <!-- Contenu principal -->
+        <section class="content">
+      <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" placeholder="rechercher...">
+        </div>
+
+      <!-- Formulaire pour ajouter un film-->
+        <section class="add-movie">
+        <h2>Ajouter un film</h2>
+            <form class="movie-card form-group">
+                <label for="title">Titre du film :</label>
+                <input type="text" id="title" name="title" placeholder="Ex : Inception" required>
+                <label for="year">Année :</label>
+                <input type="number" id="year" name="year" placeholder="2024" required>
+                <label for="genre">Genre :</label>
+                <select id="genre" name="genre">
+                    <option value="action">Action</option>
+                    <option value="comédie">Comédie</option>
+                    <option value="drame">Drame</option>
+                    <option value="horreur">Horreur</option>
+                    <option value="science-fiction">Science-fiction</option>
+                </select>
+                <label for="poster">Affiche (URL) :</label>
+                <input type="url" id="poster" name="poster" placeholder="http://...">
+                <label for="note">Note :</label>
+                <input type="number" id="note" name="note" min="0" max="5" step="0.5">
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+
+      <!-- Liste des films -->
+        <h2>Tous les films</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <div class="movie-img">img</div>
+                <div class="rating">★★★★☆</div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">img</div>
+                <div class="rating">★★★☆☆</div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">img</div>
+                <div class="rating">★★★★☆</div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">img</div>
+                <div class="rating">★★★☆☆</div>
+            </div>
+        </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SportTracker — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header_nav">
+      <h1 class="brand">SportTracker</h1>
+      <form class="search">
+        <input id="searchInput" name="searchInput" type="search" placeholder="Rechercher…" />
+      </form>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="page-head">
+      <h2 id="periode-title" class="periode-title">Nom – Mois – Année</h2>
+
+      <div class="navigation">
+        <button class="btn btn-primary" type="button">+ Nouvelle Séance</button>
+        <button class="btn" type="button">Historique</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <h3 id="stats-title">Statistiques</h3>
+
+      <article class="stat-card">
+        <div class="stat-card__head">Distance Totale</div>
+        <div class="stat-card__value">...</div>
+        <div class="stat-card__delta">....</div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-card__head">Séances</div>
+        <div class="stat-card__value">....</div>
+        <div class="stat-card__delta">....</div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-card__head">Calories</div>
+        <div class="stat-card__value">...</div>
+        <div class="stat-card__delta">....</div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-card__head">Temps Total</div>
+        <div class="stat-card__value">....</div>
+        <div class="stat-card__delta">....</div>
+      </article>
+    </section>
+
+    
+    <section class="graphs" >
+      <div class="graph_header">
+        <h3 id="graph-title">Graphiques</h3>
+        <div class="tabs">
+          <button>Semaine</button>
+          <button>Mois</button>
+          <button>Année</button>
+        </div>
+      </div>
+
+      
+      <div class="graph-img">
+        <!-- Un canvas ou un SVG sera injecté ici côté JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#">Mentions légales</a>
+    <a href="#">Confidentialité</a>
+  </footer>
+
+</body>
+</html>

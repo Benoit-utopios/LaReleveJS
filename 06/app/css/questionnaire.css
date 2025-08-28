@@ -1,0 +1,453 @@
+/* ===== CSS SPÉCIFIQUE AU QUESTIONNAIRE ===== */
+
+/* Mise en page spécifique */
+body {
+    padding: var(--spacing-md);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Légende des réponses */
+.legend {
+    background: var(--light-gray);
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.legend-title {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2em;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.legend-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.legend-item {
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    flex: 1;
+    padding: 0 var(--spacing-sm);
+    transition: var(--transition-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.legend-item:hover {
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.legend-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin: 0 auto 8px;
+    font-size: 1.2em;
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    width: 35px;
+    height: 35px;
+    border-radius: var(--radius-full);
+    transition: var(--transition-medium);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.legend-item:hover .legend-number {
+    background: var(--primary-gradient);
+    color: var(--white);
+    transform: rotate(360deg) scale(1.1);
+}
+
+.legend-text {
+    line-height: 1.2;
+    min-height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Section questionnaire */
+.questionnaire-section {
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.questionnaire-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Fieldsets de questions */
+.question-fieldset {
+    border: none;
+    margin: 0 0 50px 0;
+    padding: var(--spacing-lg);
+    background: linear-gradient(145deg, #fdfdfd 0%, #f8f9fa 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-medium);
+    transition: var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-theme .question-fieldset {
+    background: linear-gradient(145deg, #2d2d2d 0%, #1e1e1e 100%);
+    border: 1px solid #404040;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.question-fieldset::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transition: var(--transition-slow);
+}
+
+.dark-theme .question-fieldset::before {
+    background: linear-gradient(90deg, transparent, rgba(187, 134, 252, 0.2), transparent);
+}
+
+.question-fieldset:hover::before {
+    left: 100%;
+}
+
+.question-fieldset:hover {
+    box-shadow: var(--shadow-medium);
+    border-color: #dee2e6;
+    transform: translateY(-5px);
+}
+
+.dark-theme .question-fieldset:hover {
+    border-color: #bb86fc;
+    box-shadow: 0 8px 25px rgba(187, 134, 252, 0.3);
+}
+
+/* Légendes de questions */
+.question-legend {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 var(--spacing-sm);
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.dark-theme .question-legend {
+    background: var(--white);
+    color: var(--text-secondary);
+}
+
+/* Contenu des questions */
+.question-content {
+    position: relative;
+    z-index: 2;
+}
+
+.question-text {
+    background: linear-gradient(135deg, #e9ecef 0%, #f1f3f4 100%);
+    padding: var(--spacing-md) 25px;
+    border-radius: var(--radius-small);
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    color: var(--text-muted);
+    font-weight: 500;
+    border-left: 4px solid #667eea;
+    position: relative;
+    transition: var(--transition-medium);
+}
+
+.dark-theme .question-text {
+    background: linear-gradient(135deg, #3d3d3d 0%, #2d2d2d 100%);
+    color: #ffffff;
+    font-weight: 600;
+    border-left: 4px solid #bb86fc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question-text:hover {
+    transform: translateX(5px);
+    box-shadow: -5px 0 15px rgba(102, 126, 234, 0.2);
+}
+
+.dark-theme .question-text:hover {
+    box-shadow: -5px 0 15px rgba(187, 134, 252, 0.3);
+}
+
+/* Options de réponse */
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--spacing-sm);
+}
+
+.option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Masquer les boutons radio natifs */
+.option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.option-button {
+    width: 65px;
+    height: 65px;
+    border-radius: var(--radius-full);
+    border: 3px solid var(--border-color);
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    cursor: pointer;
+    transition: var(--transition-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--text-secondary);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.option-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(102, 126, 234, 0.2);
+    border-radius: var(--radius-full);
+    transition: var(--transition-medium);
+    transform: translate(-50%, -50%);
+}
+
+.option-button:hover {
+    border-color: #667eea;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    animation: glow 2s infinite;
+}
+
+.dark-theme .option-button:hover {
+    border-color: #bb86fc;
+    box-shadow: 0 8px 20px rgba(187, 134, 252, 0.4);
+}
+
+.option-button:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.option-button:active {
+    transform: translateY(-1px) scale(0.95);
+}
+
+/* État sélectionné */
+.option input[type="radio"]:checked + .option-button {
+    background: var(--primary-gradient);
+    border-color: #667eea;
+    color: var(--white);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    animation: pulse 2s infinite;
+}
+
+.dark-theme .option input[type="radio"]:checked + .option-button {
+    border-color: #bb86fc;
+    box-shadow: 0 8px 25px rgba(187, 134, 252, 0.5);
+}
+
+.option input[type="radio"]:checked + .option-button::before {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+}
+
+/* Focus pour l'accessibilité */
+.option input[type="radio"]:focus + .option-button {
+    outline: 2px solid var(--primary-gradient);
+    outline-offset: 2px;
+}
+
+/* Section de validation */
+.submit-section {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    margin-top: var(--spacing-lg);
+    border-radius: 0 0 var(--radius-large) var(--radius-large);
+    display: flex; /* Ajout pour un meilleur centrage */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-theme .submit-section {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1e1e1e 100%);
+}
+
+.submit-section .btn {
+    padding: 18px 50px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    margin: 0 auto; /* Assure le centrage horizontal */
+    display: inline-flex; /* Ajout pour un meilleur contrôle */
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-section .btn span:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+.button-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-full);
+    transform: translate(-50%, -50%);
+    transition: var(--transition-medium);
+}
+
+.submit-section .btn:hover .button-ripple {
+    width: 200px;
+    height: 200px;
+    animation: ripple 0.6s ease-out;
+}
+
+.submit-help {
+    margin-top: var(--spacing-md);
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Responsive spécifique */
+@media (max-width: 768px) {
+    .questionnaire-section {
+        padding: 25px var(--spacing-md);
+    }
+
+    .question-fieldset {
+        padding: 25px var(--spacing-md);
+        margin-bottom: 35px;
+    }
+
+    .options-container {
+        gap: 12px;
+        max-width: 100%;
+        padding: var(--spacing-xs);
+    }
+
+    .option-button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.1em;
+    }
+
+    .legend {
+        padding: var(--spacing-md);
+    }
+
+    .legend-item {
+        font-size: 0.75em;
+        padding: 0 var(--spacing-xs);
+    }
+
+    .legend-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .question-text {
+        font-size: 1em;
+        padding: 15px 18px;
+    }
+
+    .submit-section {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .submit-section .btn {
+        padding: 15px var(--spacing-xl);
+        font-size: 1em;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .options-container {
+        gap: 8px;
+    }
+
+    .option-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1em;
+    }
+
+    .legend-row {
+        flex-wrap: wrap;
+        gap: 15px var(--spacing-sm);
+    }
+
+    .legend-item {
+        flex: 1 1 30%;
+        min-width: 80px;
+    }
+
+    .question-text {
+        padding: 12px 15px;
+    }
+
+    /* Réduire les effets sur mobile pour les performances */
+    .question-fieldset::before {
+        display: none;
+    }
+}

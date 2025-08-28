@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Validé  | Confirmation</title>
+    <meta name="description" content="Confirmation de validation du questionnaire d'évaluation">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/validation.css">
+    <link rel="stylesheet" href="css/confettis.css">
+</head>
+<body>
+    <!-- Toggle Dark/Light Mode -->
+    <aside class="theme-toggle" aria-label="Basculer le thème">
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Activer le mode sombre">
+        <label for="theme-switch" class="theme-label" title="Basculer entre mode clair et sombre">
+            <span class="theme-icon sun" aria-hidden="true">&#x1F31E;</span>
+            <span class="theme-icon moon" aria-hidden="true">&#127769;</span>
+            <span class="toggle-slider" aria-hidden="true"></span>
+        </label>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="container" id="main-content">
+        
+        <!-- Animation de succès -->
+        <header class="success-animation" aria-labelledby="success-title">
+            <div class="checkmark-circle" role="img" aria-label="Validation réussie">
+                <div class="checkmark" aria-hidden="true"></div>
+            </div>
+        </header>
+
+        <!-- Contenu principal -->
+        <section class="content">
+            <h1 id="success-title" class="title fade-in">Questionnaire validé !</h1>
+            <p class="subtitle fade-in delay-1">
+                Merci pour votre participation. Vos réponses ont été enregistrées avec succès.
+            </p>
+
+            <!-- Résumé des réponses -->
+            <article class="summary-card slide-up delay-2" aria-labelledby="summary-title">
+                <h2 id="summary-title" class="summary-title">
+                    Résumé de votre évaluation
+                </h2>
+                <div class="summary-content" role="list">
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Questions répondues</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number" id="completion-time">2:34</span>
+                        <span class="stat-label">Temps de completion</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">GG</span>
+                        <span class="stat-label">Statut : Validé</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Message de remerciement -->
+            <aside class="thank-you-card bounce delay-3" aria-labelledby="thank-you-title">
+                <div class="thank-you-icon" aria-hidden="true">GG</div>
+                <h3 id="thank-you-title">Merci pour votre temps !</h3>
+                <p>Vos commentaires nous aident à améliorer continuellement notre service.</p>
+            </aside>
+
+            <!-- Actions -->
+            <nav class="actions slide-up delay-4" id="actions" aria-label="Actions disponibles">
+                <button class="btn btn-secondary" onclick="goBack()" type="button">
+                    <span>Nouveau questionnaire</span>
+                </button>
+                <button class="btn btn-outline" onclick="goHome()" type="button">
+                    <span>Retour à l'accueil</span>
+                </button>
+            </nav>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer fade-in delay-5">
+            <p>
+                Questionnaire complété le <time id="current-date" datetime=""></time> à <time id="current-time" datetime=""></time>
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Confettis d'arrière-plan -->
+    <div class="confetti-container" aria-hidden="true">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+    </div>
+
+</body>
+</html>

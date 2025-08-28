@@ -15,4 +15,4 @@ npm run dev
 ```
 
 ## Notes pour le/la suivant·e
-(Choix techniques, points flous, idées de suite, pièges à éviter.)
+ Il se peut que l'html fournit ne soit pas nécissaire ou quelques parties, et qu'il soit généré en JS

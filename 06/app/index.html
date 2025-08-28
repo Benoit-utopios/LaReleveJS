@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire d'Évaluation | Interface Utilisateur</title>
+    <meta name="description" content="Questionnaire d'évaluation de l'interface utilisateur avec échelle de Likert">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/questionnaire.css">
+</head>
+<body>
+    <!-- Toggle Dark/Light Mode -->
+    <aside class="theme-toggle" aria-label="Basculer le thème">
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Activer le mode sombre">
+        <label for="theme-switch" class="theme-label" title="Basculer entre mode clair et sombre">
+            <span class="theme-icon sun" aria-hidden="true">&#x1F31E;</span>
+            <span class="theme-icon moon" aria-hidden="true">&#127769;</span>
+            <span class="toggle-slider" aria-hidden="true"></span>
+        </label>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="container" id="main-content">
+        
+        <!-- En-tête -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="fade-in">Questionnaire d'évaluation</h1>
+                <p class="fade-in delay-1">
+                    Veuillez évaluer votre niveau d'accord avec chaque affirmation en utilisant l'échelle de 1 à 5
+                </p>
+            </div>
+        </header>
+
+        <!-- Légende de l'échelle de Likert -->
+        <section class="legend" aria-labelledby="legend-title">
+            <h2 id="legend-title" class="legend-title slide-down">Échelle d'évaluation</h2>
+            <div class="legend-row" role="list">
+                <div class="legend-item bounce delay-1" role="listitem">
+                    <span class="legend-number" aria-hidden="true">1</span>
+                    <span class="legend-text">Pas du tout<br>d'accord</span>
+                </div>
+                <div class="legend-item bounce delay-2" role="listitem">
+                    <span class="legend-number" aria-hidden="true">2</span>
+                    <span class="legend-text">Plutôt pas<br>d'accord</span>
+                </div>
+                <div class="legend-item bounce delay-3" role="listitem">
+                    <span class="legend-number" aria-hidden="true">3</span>
+                    <span class="legend-text">Neutre</span>
+                </div>
+                <div class="legend-item bounce delay-4" role="listitem">
+                    <span class="legend-number" aria-hidden="true">4</span>
+                    <span class="legend-text">Plutôt<br>d'accord</span>
+                </div>
+                <div class="legend-item bounce delay-5" role="listitem">
+                    <span class="legend-number" aria-hidden="true">5</span>
+                    <span class="legend-text">Complètement<br>d'accord</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulaire du questionnaire -->
+        <section class="questionnaire-section">
+            <form class="questionnaire-form" method="POST" action="validation.html" id="questionnaire-form" 
+                  aria-labelledby="main-title" novalidate>
+                
+                <fieldset class="question-fieldset slide-up delay-1">
+                    <legend class="question-legend">Question 1 sur 5</legend>
+                    <div class="question-content">
+                        <h3 class="question-text">
+                            Je trouve cette interface facile à utiliser
+                        </h3>
+                        <div class="options-container" role="radiogroup" aria-labelledby="q1-legend">
+                            <div class="option">
+                                <input type="radio" name="question_1" value="1" id="q1_1" 
+                                       aria-describedby="legend-title" required>
+                                <label for="q1_1" class="option-button" title="Pas du tout d'accord">1</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_1" value="2" id="q1_2" 
+                                       aria-describedby="legend-title">
+                                <label for="q1_2" class="option-button" title="Plutôt pas d'accord">2</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_1" value="3" id="q1_3" 
+                                       aria-describedby="legend-title">
+                                <label for="q1_3" class="option-button" title="Neutre">3</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_1" value="4" id="q1_4" 
+                                       aria-describedby="legend-title">
+                                <label for="q1_4" class="option-button" title="Plutôt d'accord">4</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_1" value="5" id="q1_5" 
+                                       aria-describedby="legend-title">
+                                <label for="q1_5" class="option-button" title="Complètement d'accord">5</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="question-fieldset slide-up delay-2">
+                    <legend class="question-legend">Question 2 sur 5</legend>
+                    <div class="question-content">
+                        <h3 class="question-text">
+                            Je déteste la personne qui a fait ce CSS
+                        </h3>
+                        <div class="options-container" role="radiogroup" aria-labelledby="q2-legend">
+                            <div class="option">
+                                <input type="radio" name="question_2" value="1" id="q2_1" 
+                                       aria-describedby="legend-title" required>
+                                <label for="q2_1" class="option-button" title="Pas du tout d'accord">1</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_2" value="2" id="q2_2" 
+                                       aria-describedby="legend-title">
+                                <label for="q2_2" class="option-button" title="Plutôt pas d'accord">2</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_2" value="3" id="q2_3" 
+                                       aria-describedby="legend-title">
+                                <label for="q2_3" class="option-button" title="Neutre">3</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_2" value="4" id="q2_4" 
+                                       aria-describedby="legend-title">
+                                <label for="q2_4" class="option-button" title="Plutôt d'accord">4</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_2" value="5" id="q2_5" 
+                                       aria-describedby="legend-title">
+                                <label for="q2_5" class="option-button" title="Complètement d'accord">5</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="question-fieldset slide-up delay-3">
+                    <legend class="question-legend">Question 3 sur 5</legend>
+                    <div class="question-content">
+                        <h3 class="question-text">
+                            Je trouve que le JS va être rapide à faire 
+                        </h3>
+                        <div class="options-container" role="radiogroup" aria-labelledby="q3-legend">
+                            <div class="option">
+                                <input type="radio" name="question_3" value="1" id="q3_1" 
+                                       aria-describedby="legend-title" required>
+                                <label for="q3_1" class="option-button" title="Pas du tout d'accord">1</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_3" value="2" id="q3_2" 
+                                       aria-describedby="legend-title">
+                                <label for="q3_2" class="option-button" title="Plutôt pas d'accord">2</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_3" value="3" id="q3_3" 
+                                       aria-describedby="legend-title">
+                                <label for="q3_3" class="option-button" title="Neutre">3</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_3" value="4" id="q3_4" 
+                                       aria-describedby="legend-title">
+                                <label for="q3_4" class="option-button" title="Plutôt d'accord">4</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_3" value="5" id="q3_5" 
+                                       aria-describedby="legend-title">
+                                <label for="q3_5" class="option-button" title="Complètement d'accord">5</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="question-fieldset slide-up delay-4">
+                    <legend class="question-legend">Question 4 sur 5</legend>
+                    <div class="question-content">
+                        <h3 class="question-text">
+                            Je vais me chauffer et rajouter du JS en plus ?
+                        </h3>
+                        <div class="options-container" role="radiogroup" aria-labelledby="q4-legend">
+                            <div class="option">
+                                <input type="radio" name="question_4" value="1" id="q4_1" 
+                                       aria-describedby="legend-title" required>
+                                <label for="q4_1" class="option-button" title="Pas du tout d'accord">1</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_4" value="2" id="q4_2" 
+                                       aria-describedby="legend-title">
+                                <label for="q4_2" class="option-button" title="Plutôt pas d'accord">2</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_4" value="3" id="q4_3" 
+                                       aria-describedby="legend-title">
+                                <label for="q4_3" class="option-button" title="Neutre">3</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_4" value="4" id="q4_4" 
+                                       aria-describedby="legend-title">
+                                <label for="q4_4" class="option-button" title="Plutôt d'accord">4</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_4" value="5" id="q4_5" 
+                                       aria-describedby="legend-title">
+                                <label for="q4_5" class="option-button" title="Complètement d'accord">5</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="question-fieldset slide-up delay-5">
+                    <legend class="question-legend">Question 5 sur 5</legend>
+                    <div class="question-content">
+                        <h3 class="question-text">
+                            Je passe un bon moment
+                        </h3>
+                        <div class="options-container" role="radiogroup" aria-labelledby="q5-legend">
+                            <div class="option">
+                                <input type="radio" name="question_5" value="1" id="q5_1" 
+                                       aria-describedby="legend-title" required>
+                                <label for="q5_1" class="option-button" title="Pas du tout d'accord">1</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_5" value="2" id="q5_2" 
+                                       aria-describedby="legend-title">
+                                <label for="q5_2" class="option-button" title="Plutôt pas d'accord">2</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_5" value="3" id="q5_3" 
+                                       aria-describedby="legend-title">
+                                <label for="q5_3" class="option-button" title="Neutre">3</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_5" value="4" id="q5_4" 
+                                       aria-describedby="legend-title">
+                                <label for="q5_4" class="option-button" title="Plutôt d'accord">4</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question_5" value="5" id="q5_5" 
+                                       aria-describedby="legend-title">
+                                <label for="q5_5" class="option-button" title="Complètement d'accord">5</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Section de validation -->
+                <section class="submit-section">
+                    <button type="submit" class="btn btn-primary pulse" form="questionnaire-form" 
+                            aria-describedby="submit-help">
+                        <span>Valider le questionnaire</span>
+                        <span class="button-ripple" aria-hidden="true"></span>
+                    </button>
+                    <p id="submit-help" class="submit-help">
+                        Assurez-vous d'avoir répondu à toutes les questions avant de valider
+                    </p>
+                </section>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Particules d'arrière-plan décoratives -->
+    <div class="particles" aria-hidden="true">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+</body>
+</html>

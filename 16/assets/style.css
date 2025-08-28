@@ -1,0 +1,83 @@
+/* Style de base */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Infos joueur */
+.infos {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+/* Plateau de jeu */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(6, 100px); /* 6 colonnes */
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+/* Carte */
+.card {
+  width: 100px;
+  height: 140px;
+  background-color: #2e3d49;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+  /* en JS il faut faire en sorte que les cartes prenne des positin randoms à chaque lancement de parite*/
+}
+
+/* Face cachée */
+.card .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4a90e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  /* Visible au début, au click cette face devient cachée => display: none;*/
+}
+
+/* Face visible */
+.card .back {
+  display: none; /* Masquée au début, au click le coté caché, s'affiche => display: block;*/
+  height: 139px;
+  width: 99px;
+}
+
+/* Message victoire */
+.message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #4CAF50;
+  display: none; /* Sera affiché en fin de partie => display: block; */
+}

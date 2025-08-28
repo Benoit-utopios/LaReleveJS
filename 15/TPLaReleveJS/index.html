@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocteurPatient</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Header avec navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Dr Patient</h1>
+                    <span>Cabinet Médical</span>
+                </div>
+                
+                <!-- Menu desktop -->
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                        <li><a href="#horaires" class="nav-link">Horaires</a></li>
+                        <li><a href="#actualites" class="nav-link">Actualités</a></li>
+                        <li><a href="#rdv" class="nav-link">Prise de RDV</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Bouton menu hamburger mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu mobile -->
+        <nav class="nav-mobile" id="navMobile">
+            <ul>
+                <li><a href="#accueil" class="nav-link-mobile">Accueil</a></li>
+                <li><a href="#horaires" class="nav-link-mobile">Horaires</a></li>
+                <li><a href="#actualites" class="nav-link-mobile">Actualités</a></li>
+                <li><a href="#rdv" class="nav-link-mobile">Prise de RDV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Accueil -->
+        <section id="accueil" class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="welcome-text">
+                        <h2>Bienvenue sur le site du Dr Patient</h2>
+                        <p class="hero-description">
+                            Médecin généraliste expérimenté, le Dr Patient vous accueille dans son cabinet moderne 
+                            situé dans la région lyonnaise. Fort de nombreuses années d'expérience, il vous propose 
+                            des consultations de médecine générale dans un environnement bienveillant et professionnel.
+                        </p>
+                        <div class="specialties">
+                            <div class="specialty-item">
+                                <div class="specialty-icon">🩺</div>
+                                <span>Médecine générale</span>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">🛡️</div>
+                                <span>Consultations préventives</span>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">📋</div>
+                                <span>Suivi médical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-image">
+                        <div class="image-placeholder">
+                            <div class="stethoscope-icon">🩺</div>
+                            <p>Dr Patient</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Horaires -->
+        <section id="horaires" class="section">
+            <div class="container">
+                <h2 class="section-title">Horaires d'ouverture</h2>
+                <div class="schedule-grid">
+                    <div class="schedule-item">
+                        <span class="day">Lundi</span>
+                        <span class="hours">08h00 - 12h00 / 14h00 - 18h00</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="day">Mardi</span>
+                        <span class="hours">08h00 - 12h00 / 14h00 - 18h00</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="day">Mercredi</span>
+                        <span class="hours">08h00 - 12h00 / Fermé l'après-midi</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="day">Jeudi</span>
+                        <span class="hours">08h00 - 12h00 / 14h00 - 18h00</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="day">Vendredi</span>
+                        <span class="hours">08h00 - 12h00 / 14h00 - 17h00</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="day">Samedi</span>
+                        <span class="hours">09h00 - 12h00</span>
+                    </div>
+                    <div class="schedule-item closed">
+                        <span class="day">Dimanche</span>
+                        <span class="hours">Fermé</span>
+                    </div>
+                </div>
+                <div class="emergency-note">
+                    <div class="emergency-icon">🚨</div>
+                    <p>En cas d'urgence en dehors des heures d'ouverture, contactez le <strong>15 (SAMU)</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Actualités -->
+        <section id="actualites" class="section">
+            <div class="container">
+                <h2 class="section-title">Actualités Santé</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-header">
+                            <h3>Campagne de vaccination antigrippale 2025</h3>
+                            <span class="news-date">Août 2025</span>
+                        </div>
+                        <p>La campagne de vaccination contre la grippe saisonnière a commencé. N'hésitez pas à prendre rendez-vous pour vous protéger et protéger vos proches.</p>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-header">
+                            <h3>Conseils nutrition pour l'automne</h3>
+                            <span class="news-date">Août 2025</span>
+                        </div>
+                        <p>Adoptez une alimentation équilibrée riche en vitamines C et D pour renforcer votre système immunitaire avant l'hiver.</p>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-header">
+                            <h3>Dépistage du cancer colorectal</h3>
+                            <span class="news-date">Juillet 2025</span>
+                        </div>
+                        <p>Le dépistage organisé du cancer colorectal concerne les hommes et femmes de 50 à 74 ans. Parlez-en lors de votre consultation.</p>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-header">
+                            <h3>Prévention des troubles musculo-squelettiques</h3>
+                            <span class="news-date">Juillet 2025</span>
+                        </div>
+                        <p>Avec la reprise du travail, pensez à adopter les bons gestes et postures pour prévenir les douleurs dorsales et articulaires.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Prise de RDV -->
+        <section id="rdv" class="section">
+            <div class="container">
+                <h2 class="section-title">Prise de rendez-vous</h2>
+                <div class="appointment-form-container">
+                    <form id="appointmentForm" class="appointment-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nom" class="form-label">Nom *</label>
+                                <input type="text" id="nom" name="nom" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom" class="form-label">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telephone" class="form-label">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date" class="form-label">Date souhaitée</label>
+                            <input type="date" id="date" name="date" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="motif" class="form-label">Motif de consultation</label>
+                            <textarea id="motif" name="motif" class="form-control" rows="4" placeholder="Décrivez brièvement le motif de votre consultation..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full-width">Prendre rendez-vous</button>
+                    </form>
+                    
+                    <!-- Message de confirmation -->
+                    <div id="confirmationMessage" class="confirmation-message hidden">
+                        <div class="confirmation-icon">✅Checking box</div>
+                        <h3>Demande envoyée avec succès !</h3>
+                        <p>Votre demande de rendez-vous a été transmise. Nous vous recontacterons dans les plus brefs délais.</p>
+                        <button id="newAppointment" class="btn btn--outline">Nouvelle demande</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Dr Patient</h3>
+                    <p>Cabinet médical Dr Patient<br>
+                    Région Lyonnaise<br>
+                    Tél: 04 XX XX XX XX<br>
+                    Email: contact@drpatient.fr</p>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2025 Cabinet Dr Patient. Tous droits réservés.</p>
+                    <p>Mentions légales • Politique de confidentialité</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

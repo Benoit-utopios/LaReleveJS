@@ -1,0 +1,161 @@
+:root {
+  /* Couleurs principales */
+  --color-bg: #f4f4f4;
+  --color-text: #333;
+  --color-white: #ffffff;
+
+  /*  Couleurs de l’en-tête et des tags */
+  --color-header-bg: #2c3e50;
+  --color-header-text: #ffffff;
+  --color-tag-bg: #ecf0f1;
+  --color-tag-text: #2c3e50;
+
+  /* Couleur des étoiles */
+  --color-star: #f1c40f;
+
+  /*  Bouton détail */
+  --color-btn-bg: #3498db;
+  --color-btn-hover: #2980b9;
+  --color-btn-text: #ffffff;
+
+  /*  Pied de page */
+  --color-footer-bg: #ecf0f1;
+  --color-footer-text: #2c3e50;
+}
+/* 🌍 Style universel */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🧱 Style général */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* 🧠 En-tête */
+header {
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.search-bar {
+  margin-top: 15px;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+/*  Section principale */
+main {
+  padding: 30px 20px;
+}
+
+/*  Liste des cartes */
+.nanar-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/*  Carte individuelle */
+.nanar-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.nanar-card:hover {
+  transform: scale(1.03);
+}
+
+.nanar-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.nanar-card h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/*  Note moyenne */
+.note {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.stars i {
+  color: var(--color-star);
+  margin-right: 2px;
+}
+
+/*  Tags */
+.tags {
+  margin-bottom: 10px;
+}
+
+.tags span {
+  display: inline-block;
+  background-color: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  padding: 5px 8px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 0.85em;
+}
+
+/*  Bouton vers détail */
+.btn-detail {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.btn-detail:hover {
+  background-color: var(--color-btn-hover);
+}
+
+/*  Pied de page */
+footer {
+  background-color: var(--color-footer-bg);
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-footer-text);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+footer a i {
+  margin-right: 5px;
+}
