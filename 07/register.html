@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="register.css">
+
+<body>
+  <button id="backButton">⬅ Retour</button>
+  <div class="logo">
+    <h1>Cooking.com cooking-yeah !</h1>
+  </div>
+  <form id="registerForm">
+    <input type="text" id="username" placeholder="Nom d'utilisateur">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <input type="password" id="confirmPassword" placeholder="Confirmer le mot de passe">
+    <button type="submit">S'inscrire</button>
+  </form>
+</body>
+<script>
+  document.getElementById('backButton').addEventListener('click', function() {
+    window.history.back();
+  });
+
+  document.getElementById('registerForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (!username || !email || !password || !confirmPassword) {
+      alert("Veuillez remplir tous les champs !");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Les mots de passe ne correspondent pas !");
+      return;
+    }
+
+    alert("Inscription réussie (simulation)");
+  });
+</script>

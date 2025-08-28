@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Puzzle 4x4</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -15,8 +16,8 @@
   <main class="layout">
     <!-- Colonne gauche -->
     <aside class="sidebar left">
-      <div class="stat">Pièces placées : <span>0/16</span></div>
-      <div class="stat">Temps écoulé : <span>00:00</span></div>
+      <div class="stat">Pièces placées : <span id="piecesCount">0/16</span></div>
+      <div class="stat">Temps écoulé : <span id="timer">00:00</span></div>
       <div class="reference">
         <h2>Image de référence</h2>
         <img src="image_ref.jpg" alt="Image de référence du puzzle">
@@ -26,7 +27,7 @@
     <!-- Zone centrale -->
     <section class="board">
       <h2>Grille de puzzle 4x4</h2>
-      <div class="grid">
+      <div id="grid">
         <!-- Cases (16 au total) -->
         <div class="cell"></div>
         <div class="cell"></div>
@@ -56,6 +57,7 @@
         <div class="piece"></div>
         <div class="piece"></div>
       </div>
+    <p>j'ai vu ça trop tard, désolé, ton puzzle sera un taquin, finalement</p>
     </aside>
   </main>
 </body>

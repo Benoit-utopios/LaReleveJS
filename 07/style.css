@@ -145,3 +145,24 @@ header {
         padding: 10px 15px;
     }
 }
+
+#loginButton {
+      background-color: #293041; /* couleur sombre */
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      margin: 1.5em;
+    }
+
+ #loginButton:hover {
+      background-color: #3a4150;
+      transform: scale(1.05);
+    }
+
+#loginButton:active {
+      transform: scale(0.95);
+    }

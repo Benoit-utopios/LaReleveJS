@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cooking.com</title>
+    <script type = "module" src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#">Menu</a>
+        <a href="#">Plats en sauce</a>
+        <a href="#">Veggie</a>
+    </nav>
+    <div class="logo">
+        <h1>Logo</h1>
+        <span>Cooking.com cooking-yeah !</span>
+    </div>
+    <nav>
+        <a href="#">Vegan</a>
+        <a href="#">Desserts</a>
+        <a href="#">Sauces</a>
+        <a href="#"><img src="image/PictoLogin3.png"></a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="image/Rectangle3.png" alt="Cuisine background">
+    <div class="search-box">
+        <h2>On mange quoi ce soir ?</h2>
+        <input type="text" id="searchInput" placeholder="Taper votre recherche">
+        <button id="searchBtn">🔍</button>
+    </div>
+</section>
+
+<section class="tabs-section">
+    <h2>Des recettes et des actus culinaire</h2>
+    <p>Plus de 90 000 recettes faciles et rapides pour vous inspirer en cuisine</p>
+    <div class="tabs">
+        <a href="#" class="active" data-categorie="Top recettes">Top recettes</a>
+        <a href="#" data-categorie="Recettes faciles">Recettes faciles</a>
+        <a href="#" data-categorie="Recettes rapides">Recettes rapides</a>
+        <a href="#" data-categorie="Desserts">Desserts</a>
+    </div>
+</section>
+
+<section id="recette-container">
+    <!-- Les recettes s'afficheront ici dynamiquement -->
+</section>
+
+</body>
+</html>

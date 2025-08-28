@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="login.css">
+
+<body>
+    <button id="backButton">⬅ Retour</button>
+    
+    <div class="logo">
+        <h1>Cooking.com cooking-yeah !</h1>
+    </div>
+
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Mot de passe">
+        <button type="submit">Se connecter</button>
+    </form>
+
+    
+    <div class="register-link">
+        <p>Pas encore inscrit ?
+            <a href="register.html">Créer un compte</a>
+        </p>
+    </div>
+
+</body>
+<script>
+    document.getElementById('backButton').addEventListener('click', function() {
+    window.history.back();
+   });
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        if (!email || !password) {
+            alert("Veuillez remplir tous les champs !");
+        } else {
+            alert("Connexion réussie (simulation)");
+            // ici tu pourrais rediriger vers une page d'accueil, par ex :
+            // window.location.href = "index.html";
+        }
+    });
+</script>

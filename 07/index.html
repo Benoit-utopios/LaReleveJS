@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooking.com - On mange quoi ce soir ?</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
+
 <body>
     <header>
+        <button id="loginButton">Se connecter</button>
         <div class="container">
             <div class="menu">
                 <div class="menu-items">
-                    <a href="#">Menu</a>
+                    <a href="menu.html">Menu</a>
                     <a href="#">Plats en sauce</a>
                     <a href="#">Veggie</a>
                 </div>
             </div>
-            
+
             <div class="logo">
                 <h1>Cooking.com cooking-yeah !</h1>
             </div>
         </div>
+
     </header>
-    
+
     <section class="hero">
         <div class="container">
             <h2>On mange quoi ce soir ?</h2>
@@ -31,12 +36,12 @@
             </div>
         </div>
     </section>
-    
+
     <section class="features">
         <div class="container">
             <p>Des recettes et des actus culinaires</p>
             <p>Plus de 90 000 recettes faciles et rapides pour vous inspirer en cuisine</p>
-            
+
             <div class="categories">
                 <div class="category">Top recettes</div>
                 <div class="category">Recettes faciles</div>
@@ -45,5 +50,16 @@
             </div>
         </div>
     </section>
+    
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function () {
+            // Redirection vers login.html
+            window.location.href = "login.html";
+        });
+    </script>
+
+
 </body>
+
 </html>

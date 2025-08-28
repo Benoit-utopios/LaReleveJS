@@ -1,7 +1,7 @@
 # Projet (anonyme)
 
 ## Contexte
-(Brève description en 3–5 lignes. Qu’est-ce que ce projet ? Pour qui ?)
+Movie Tracker est une application web qui permet à un utilisateur de gérer sa liste de films à voir et déjà vus. L’objectif est d’offrir une interface claire et agréable pour garder en mémoire les films que l’on souhaite regarder, et d’ajouter une dimension ludique en notant les films vus.
 
 ## Objectifs
 - [ ] …

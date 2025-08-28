@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeu de mémoire</title>
   <link rel="stylesheet" href="./assets/style.css">
 </head>
@@ -17,66 +18,181 @@
   </div>
 
   <!-- Plateau de jeu avec 24 cartes (12 paires) -->
-  <!-- Avec le JavaScript, il faudra mélanger les cartes de façon aléatoire à chaque nouvelle partie.
-     Les paires ne doivent pas forcément être placées côte à côte comme dans ce code HTML de départ. -->
-
   <div class="game-board">
+    <!-- Paire 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/1.jpg" alt="Carte 1"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/1.jpg" alt="Carte 1"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/1.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/1.jpg" alt=""></div>
+    <!-- Paire 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/2.jpg" alt="Carte 2"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/2.jpg" alt="Carte 2"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/2.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/2.jpg" alt=""></div>
+    <!-- Paire 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/3.jpg" alt="Carte 3"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/3.jpg" alt="Carte 3"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/3.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/3.jpg" alt=""></div>
+    <!-- Paire 4 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/4.jpg" alt="Carte 4"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/4.jpg" alt="Carte 4"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/4.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/4.jpg" alt=""></div>
+    <!-- Paire 5 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/5.jpg" alt="Carte 5"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/5.jpg" alt="Carte 5"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/5.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/5.jpg" alt=""></div>
+    <!-- Paire 6 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/6.jpg" alt="Carte 6"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/6.jpg" alt="Carte 6"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/6.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/6.jpg" alt=""></div>
+    <!-- Paire 7 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/7.jpg" alt="Carte 7"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/7.jpg" alt="Carte 7"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/7.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/7.jpg" alt=""></div>
+    <!-- Paire 8 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/8.jpg" alt="Carte 8"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/8.jpg" alt="Carte 8"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/8.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/8.jpg" alt=""></div>
+    <!-- Paire 9 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/9.jpg" alt="Carte 9"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/9.jpg" alt="Carte 9"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/9.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/9.jpg" alt=""></div>
+    <!-- Paire 10 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/10.jpg" alt="Carte 10"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/10.jpg" alt="Carte 10"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/10.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/10.jpg" alt=""></div>
+    <!-- Paire 11 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/11.jpg" alt="Carte 11"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/11.jpg" alt="Carte 11"></div>
+      </div>
+    </div>
 
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/11.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/11.jpg" alt=""></div>
-
-    
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/12.jpg" alt=""></div>
-    <div class="card"><div class="front">?</div><img class="back" src="./assets/img/12.jpg" alt=""></div>
-
+    <!-- Paire 12 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/12.jpg" alt="Carte 12"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="front">?</div>
+        <div class="back"><img src="./assets/img/12.jpg" alt="Carte 12"></div>
+      </div>
+    </div>
   </div>
 
   <!-- Message de victoire -->
-<!-- Ce message doit rester caché au début et ne s’affiche qu’à la fin de la partie -->
   <div class="message" id="victory-message">
-    Bravo ! Vous avez gagné !
+    <!-- Le contenu sera généré dynamiquement par JavaScript -->
   </div>
 
+  <script src="./assets/script.js"></script>
 </body>
 </html>

@@ -2,15 +2,14 @@
 <html class="dark transition-colors duration-1000" lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Liste de tâche</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Liste de tâches</title>
     <link href="output.css" rel="stylesheet" />
     <script defer src="index.js"></script>
   </head>
   <body>
     <!-- Conteneur principal de l'application -->
-    <div
-      class="flex min-h-screen w-full flex-col bg-gray-100 dark:bg-slate-950"
-    >
+    <div class="flex min-h-screen w-full flex-col bg-gray-100 dark:bg-slate-950">
       <!-- En-tête avec logo et navigation -->
       <header class="flex w-full flex-row items-center gap-8 p-6">
         <div class="flex w-full flex-row items-center justify-between gap-16">
@@ -23,25 +22,19 @@
 
           <!-- Navigation -->
           <nav class="flex w-fit flex-row gap-8 dark:text-white">
-            <a href="#">Actualiser</a>
-            <a href="index.html">Nouvelle tâche</a>
+            <a class="transition-colors hover:text-indigo-400" href="#" onclick="window.location.reload()">Actualiser</a>
+            <a class="transition-colors hover:text-indigo-400" href="index.html">Nouvelle tâche</a>
           </nav>
         </div>
 
         <!-- Interrupteur pour le mode sombre/clair -->
         <div class="flex w-fit">
-          <div
-            class="group relative inline-flex h-5 w-10 shrink-0 items-center justify-center rounded-full outline-offset-2 outline-indigo-600 has-focus-visible:outline-2"
-          >
+          <div class="group relative inline-flex h-5 w-10 shrink-0 items-center justify-center rounded-full outline-offset-2 outline-indigo-600 has-focus-visible:outline-2">
             <!-- Fond de l'interrupteur -->
-            <span
-              class="absolute mx-auto h-4 w-9 rounded-full bg-gray-200 inset-ring inset-ring-gray-900/5 transition-colors duration-200 ease-in-out group-has-checked:bg-indigo-600"
-            ></span>
+            <span class="absolute mx-auto h-4 w-9 rounded-full bg-gray-200 inset-ring inset-ring-gray-900/5 transition-colors duration-200 ease-in-out group-has-checked:bg-indigo-600"></span>
 
             <!-- Bouton circulaire de l'interrupteur -->
-            <span
-              class="absolute left-0 size-5 rounded-full border border-gray-300 bg-white shadow-xs transition-transform duration-200 ease-in-out group-has-checked:translate-x-5"
-            ></span>
+            <span class="absolute left-0 size-5 rounded-full border border-gray-300 bg-white shadow-xs transition-transform duration-200 ease-in-out group-has-checked:translate-x-5"></span>
 
             <!-- Case à cocher cachée pour gérer l'état -->
             <input
@@ -56,26 +49,118 @@
       </header>
 
       <!-- Contenu principal -->
-      <main class="flex w-full flex-col pt-10">
-        <!-- Carte de conteneur pour les tâches -->
-        <div
-          class="flex flex-col gap-8 rounded-xl bg-gray-200 p-6 dark:bg-slate-900"
-        >
-          <!-- Indicateur de section -->
-          <p class="text-base/6 text-gray-900 dark:text-white" id="mirror">
-            Tâche
-          </p>
+      <main class="flex w-full flex-col items-center pt-10 px-6">
+        <div class="w-full max-w-4xl">
+          <!-- Titre -->
+          <h2 class="mb-6 text-center text-3xl font-bold text-gray-900 dark:text-white">
+            Mes tâches
+          </h2>
 
-          <!-- Bouton pour créer une nouvelle tâche -->
-          <button
-            class="w-fit cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            id="btnRestart"
-            type="button"
-          >
-            Créer une nouvelle tâche
-          </button>
+          <!-- Message de confirmation -->
+          <div class="mb-4 hidden rounded-md bg-green-100 p-4 dark:bg-green-900/20" id="message">
+            <p class="text-sm font-medium text-green-800 dark:text-green-200" id="messageText"></p>
+          </div>
+
+          <!-- Statistiques -->
+          <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div class="rounded-lg bg-blue-100 p-4 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800">
+              <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-200">Total</h3>
+              <p class="text-2xl font-bold text-blue-900 dark:text-blue-100" id="totalTasks">0</p>
+            </div>
+            <div class="rounded-lg bg-yellow-100 p-4 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
+              <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200">En cours</h3>
+              <p class="text-2xl font-bold text-yellow-900 dark:text-yellow-100" id="pendingTasks">0</p>
+            </div>
+            <div class="rounded-lg bg-green-100 p-4 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
+              <h3 class="text-lg font-semibold text-green-800 dark:text-green-200">Terminées</h3>
+              <p class="text-2xl font-bold text-green-900 dark:text-green-100" id="completedTasks">0</p>
+            </div>
+          </div>
+
+          <!-- Filtres -->
+          <div class="mb-6 flex flex-wrap gap-2 justify-center">
+            <button
+              class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500 transition-colors"
+              id="filterAll"
+            >
+              Toutes
+            </button>
+            <button
+              class="rounded-md bg-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-400 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500 transition-colors"
+              id="filterPending"
+            >
+              En cours
+            </button>
+            <button
+              class="rounded-md bg-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-400 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500 transition-colors"
+              id="filterCompleted"
+            >
+              Terminées
+            </button>
+          </div>
+
+          <!-- Liste des tâches -->
+          <div class="space-y-4 mb-8" id="tasksList">
+            <!-- Message si aucune tâche -->
+            <div
+              class="rounded-lg bg-gray-200 p-8 text-center dark:bg-slate-800 border border-gray-300 dark:border-gray-700"
+              id="noTasksMessage"
+            >
+              <p class="text-gray-500 dark:text-gray-400">
+                Aucune tâche pour le moment.
+                <a href="index.html" class="text-indigo-600 hover:text-indigo-500 underline transition-colors">
+                  Créez votre première tâche !
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Actions globales -->
+          <div class="flex flex-wrap gap-4 justify-center border-t border-gray-200 dark:border-gray-700 pt-6">
+            <button
+              class="rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 transition-colors"
+              id="clearCompleted"
+            >
+              Supprimer les tâches terminées
+            </button>
+            <button
+              class="rounded-md bg-gray-600 px-4 py-2 text-sm font-medium text-white hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 transition-colors"
+              id="clearAll"
+            >
+              Tout supprimer
+            </button>
+          </div>
         </div>
       </main>
+    </div>
+
+    <!-- Modal de modification -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm" id="editModal">
+      <div class="w-full max-w-md rounded-lg bg-white p-6 dark:bg-slate-800 shadow-xl border border-gray-200 dark:border-gray-700 m-4">
+        <h3 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+          Modifier la tâche
+        </h3>
+        <input
+          class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-gray-600 dark:bg-slate-700 dark:text-white dark:focus:border-indigo-400"
+          id="editInput"
+          type="text"
+          placeholder="Modifier votre tâche..."
+        />
+        <div class="mt-6 flex justify-end gap-3">
+          <button
+            class="rounded-md bg-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-400 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500 transition-colors"
+            id="cancelEdit"
+          >
+            Annuler
+          </button>
+          <button
+            class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
+            id="saveEdit"
+          >
+            Sauvegarder
+          </button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

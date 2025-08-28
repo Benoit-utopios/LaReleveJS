@@ -133,4 +133,68 @@
     color: orange;
 }
 
+/****  Section Recettes ******/
+#recette-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.recette {
+    width: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.recette:hover {
+    transform: scale(1.03);
+}
+
+.recette img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recette h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.recette p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.recette ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.recette li {
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* Bouton Voir la recette */
+.btn-recette {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-recette:hover {
+    background-color: #e85c5c;
+}
 

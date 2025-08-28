@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanars à noter</title>
+    <link rel="stylesheet" href="src/styles/css/style.css">
+    <script src="src/app/index.js" defer></script>
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+     <!-- En-tête du site -->
+    <header>
+        <h1> Les Nanars du Web</h1>
+        <!-- Barre de recherche -->
+        <section class="search-bar">
+        <input type="text" placeholder="Rechercher un nanar par titre...">
+        <select>
+            <option value="">Filtrer par tag</option>
+            <!-- Tags dynamiques à insérer ici -->
+        </select>
+        </section>
+    </header>
+
+    <!-- Liste des nanars sous forme de cartes -->
+    <main>
+        <section class="nanar-list">
+            <!-- Exemple de carte de nanar -->
+            <article class="nanar-card">
+                <img src="https://i.pinimg.com/236x/bf/1c/c9/bf1cc9a7967dc20c65e4548f5ef65396.jpg" alt="Affiche du nanar">
+                <h2>Titre du nanar</h2>
+                <p>Note moyenne : 
+                    <span class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </p>
+                <div class="tags">
+                    <span><i class="fa-solid fa-tag"></i> #action</span>
+                    <span><i class="fa-solid fa-tag"></i> #absurde</span>
+                </div>
+                <a href="src/styles/pages/detail.html" class="btn-detail">Voir le détail</a>
+            </article>
+
+        <!-- D'autres cartes seront ajoutées dynamiquement -->
+         
+        </section>
+    </main>
+
+     <!-- Lien vers le formulaire de création -->
+    <footer>
+        <a href="src/styles/pages/poster.html"><i class="fa-solid fa-upload"></i> Poster un nanar</a>
+    </footer>
+
+</body>
+</html>
