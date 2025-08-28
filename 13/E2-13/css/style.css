@@ -24,7 +24,6 @@
             background-color: #fff;
             padding: 2rem 0;
             box-shadow: 0 .2rem .4rem rgba(0,0,0,0.1);
-            display:none;
         }
 
         header h1 {
@@ -36,12 +35,29 @@
 
         /* Main content */
         main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 2rem;
+            display: block;             /* annule tout flex éventuel */
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.1);
+            line-height: 1.6;
         }
+
+        main h2 {
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        main p {
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: #374151;
+        }
+
 
         .newsletter-container {
             background: white;
@@ -217,13 +233,121 @@
             padding: 2rem 0;
             text-align: center;
             border-top: .1rem solid #e5e7eb;
-            display:none;
         }
 
         footer p {
             font-size: 1.4rem;
             color: #6b7280;
         }
+
+        
+
+
+/************************************************************************/
+/* Dark mode : */
+/*************************************************************************/
+/* ---- transitions douces (respecte reduce-motion) ---- */
+@media (prefers-reduced-motion: no-preference) {
+  html, body, main, header, footer, .newsletter-container, .modal-content,
+  .email-input, .submit-btn, .privacy-link {
+    transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+}
+
+/* ---- Toggle positionné en haut à droite ---- */
+.theme-toggle{
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 1200;
+}
+.theme-toggle input{ position: absolute; opacity: 0; pointer-events: none; }
+.theme-toggle label{
+  width: 62px; height: 32px; border-radius: 999px;
+  background: #e5e7eb; display: inline-flex; align-items: center; justify-content: space-between;
+  padding: 0 .6rem; box-shadow: 0 .1rem .4rem rgba(0,0,0,.15); cursor: pointer; position: relative;
+  font-size: 14px;
+}
+.theme-toggle .sun{ opacity: .9 }
+.theme-toggle .moon{ opacity: .5 }
+.theme-toggle .ball{
+  position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%;
+  background: white; box-shadow: 0 .2rem .5rem rgba(0,0,0,.25);
+  transition: transform .25s ease, background-color .25s ease;
+}
+.theme-toggle input:checked + label .ball{ transform: translateX(30px); }
+.theme-toggle input:checked + label .moon{ opacity: .9 }
+.theme-toggle input:checked + label .sun{ opacity: .5 }
+
+
+
+/* ---- Thème sombre ---- */
+body.dark{
+  color: #e5e7eb;
+  background-color: #0f172a; /* slate-900 */
+}
+body.dark header{
+  background-color: #0b1220; /* plus sombre que body */
+  box-shadow: 0 .2rem .4rem rgba(0,0,0,.6);
+}
+body.dark header h1{ color: #e5e7eb; }
+
+body.dark main{
+  background: #111827;           /* gray-900 */
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.5);
+  border-color: #1f2937;
+}
+body.dark main h2{ color: #e5e7eb; }
+body.dark main p{ color: #cbd5e1; }
+
+body.dark .newsletter-container{
+  background: #111827;
+  box-shadow: 0 .8rem 3.2rem rgba(0,0,0,0.55);
+}
+body.dark .newsletter-title{ color: #e5e7eb; }
+
+body.dark .email-input{
+  background: #0b1220;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+body.dark .email-input::placeholder{ color: #9ca3af; }
+body.dark .email-input:focus{
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 .3rem rgba(139,92,246,.15);
+}
+
+body.dark .submit-btn{
+  /* conserve ton dégradé, renforce l'ombre en dark */
+  box-shadow: 0 .8rem 2.5rem rgba(139, 92, 246, 0.35);
+}
+
+body.dark .privacy-text{ color:#94a3b8; }
+body.dark .privacy-link{ color:#8b5cf6; }
+
+body.dark .modal-overlay{ background-color: rgba(0,0,0,.7); }
+body.dark .modal-content{
+  background:#0b1220;
+  color:#e5e7eb;
+  box-shadow: 0 2rem 6rem rgba(0,0,0,0.6);
+}
+body.dark .close-btn{ color:#9ca3af; }
+body.dark .close-btn:hover{ color:#e5e7eb; background:#111827; }
+
+body.dark footer{
+  background:#0b1220;
+  border-top-color:#1f2937;
+}
+body.dark footer p{ color:#94a3b8; }
+
+/* lien focus visible dans les deux thèmes */
+a:focus-visible, button:focus-visible, input:focus-visible{
+  outline: 3px solid #8b5cf6; outline-offset: 2px;
+}
+
+
+
+/*************************************************************************/
 
 
         @media (max-width: 768px) {
@@ -275,3 +399,5 @@
                 display: hidden;
             }
         }
+
+        
