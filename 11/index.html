@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
     <div id="card-creator">
-    <input type="text" placeholder="entre le nom du destinataire">
-<div id="image-selector">
-<p>choisis ton image</p>
-   <select name="image-selection" id="image-selection">
-        <option value="star">etoiles</option>
-        <option value="heart">coeur</option>
-        <option value="flame-thrower">lance-flammes</option>
-    </select>
-</div>
+        <label>
+            <input type="text" placeholder="entre le nom du destinataire"/>
+        </label>
+        <div id="image-selector">
+            <p>choisis ton image</p>
+            <select name="image-selection" id="image-selection">
+                <option value="star">etoiles</option>
+                <option value="heart">coeur</option>
+                <option value="flame-thrower">lance-flammes</option>
+            </select>
+        </div>
 
-    <input type="text" placeholder="entre ton nom">
-    <div id="button-div">
-    <button>Annuler</button>
-    <button id="submit">Valider</button>
-    </div>
+        <input type="text" placeholder="entre ton nom">
+        <div id="button-div">
+            <button>Annuler</button>
+            <button id="submit">Valider</button>
+        </div>
     </div>
     <div id="card">
         <h1>Carte de voeux</h1>
@@ -31,5 +35,7 @@
         <p id="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, voluptate?</p>
         <p id="emissaire">De la part de : </p>
     </div>
+</div>
+
 </body>
 </html>
