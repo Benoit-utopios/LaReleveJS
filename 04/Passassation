@@ -1,0 +1,183 @@
+PASSATION – Puzzle 4×4 
+
+/---------------------------------------------------------/
+Ce qui est déjà fait (Étapes 1 & 2)
+/---------------------------------------------------------/
+
+    /----------------------------/
+    Structure de fichiers
+    /----------------------------/
+    index.html : toute la structure sémantique.
+
+    CSS inclus dans <style> (peut être extrait en styles.css si besoin).
+
+    /----------------------------/
+    Layout
+    /----------------------------/
+    Grille 3 colonnes : .sidebar-left | .main (board) | .sidebar-right.
+
+    Responsive < 1200px : empilement vertical.
+
+    /----------------------------/
+    Composants clefs & classes
+    /----------------------------/
+    Board (grille de jeu) :
+
+    conteneur .board → .grid (4×4).
+
+    cellules (16) : .cell (+ états visuels à activer en JS : .cell--valid, .cell--invalid, .cell--occupied).
+
+    Pièces (zone de droite) :
+
+    liste .pieces__grid ; chaque pièce : .piece
+
+    états visuels déjà stylés : .piece--drag (en cours de drag), .piece--placed (correcte, ajoute ✓).
+
+    Stats (gauche) :
+
+    compteur : texte “Pièces : 8/16” (à mettre à jour).
+
+    chrono : texte “Chronomètre : 02:15” (à gérer).
+
+    barre : .progress__bar (width à ajuster).
+
+    Contrôles :
+
+    boutons “Nouveau”, “Aide”, “Pause” dans .controls
+
+    variantes : .btn--primary, .btn--secondary, :disabled déjà stylés.
+
+    Design system (variables CSS) déjà en place : couleurs, tailles, rayons, ombres, etc.
+
+/---------------------------------------------------------/
+Ce qui reste à faire (Étape 3 – JS)
+/---------------------------------------------------------/
+    /----------------------------/
+    1. Drag & Drop HTML5
+    /----------------------------/
+
+    Rendre chaque .piece draggable.
+
+    Autoriser le drop sur .cell.
+
+    Pendant le drag, ajouter/retirer .piece--drag.
+
+    Survol d’une case cible : ajouter .cell--valid si la pièce correspond, sinon .cell--invalid.
+
+    /----------------------------/
+    2. Vérification de placement
+    /----------------------------/
+    Associer à chaque .piece et chaque .cell un index (0→15) via data-index.
+
+    Exemple :
+
+    <div class="piece" data-index="5"></div>
+    <div class="cell"  data-index="5"></div>
+
+
+    Si piece.data-index === cell.data-index → placement valide :
+
+    Insérer la pièce dans la cellule (ou cloner et “locker”).
+
+    Ajouter .cell--occupied.
+
+    Ajouter .piece--placed sur la pièce (et la rendre non draggable).
+
+    Retirer les classes d’état sur les autres cellules.
+
+    /----------------------------/
+    3. Compteur & progression
+    /----------------------------/
+
+    Compter les pièces placées (ex : placedCount).
+
+    Mettre à jour le texte du compteur dans la sidebar gauche (“Pièces : x/16”).
+
+    Mettre à jour la largeur de .progress__bar (ex style.width = (placedCount/16*100)+'%').
+
+    Condition de victoire : placedCount === 16 → afficher animation (CSS class sur <body> ou confettis en JS).
+
+    /----------------------------/
+    4. Chronomètre
+    /----------------------------/
+    Démarrer au premier drag ou clic sur “Nouveau”.
+
+    Afficher au format MM:SS dans le bloc “Chronomètre :”.
+
+    Bouton Pause : geler le timer (et ignorer le drag).
+
+    Bouton Nouveau : reset timer, reset compteur, réinitialiser le board et re-mélanger les pièces.
+
+    /----------------------------/
+    5. Aide
+    /----------------------------/
+    Quand on clique sur Aide :
+
+    soit highlight une paire (une pièce correcte + sa cellule) pendant 2–3s (ajouter .cell--valid sur la bonne cellule et un outline sur la bonne pièce),
+
+    soit snap une seule pièce aléatoire au bon endroit (si autorisé par tes règles).
+
+    /----------------------------/
+    6. Mélange des pièces
+    /----------------------------/
+    Au lancement et au “Nouveau”, mélanger l’ordre d’affichage des .piece dans .pieces__grid.
+
+/---------------------------------------------------------/
+ Hooks concrets dans le DOM (recommandés)
+/---------------------------------------------------------/
+
+    /----------------------------/
+    Indices
+    /----------------------------/
+
+    Ajouter data-index="0..15" sur chaque .cell dans l’ordre de la grille.
+
+    Ajouter data-index correspondant sur chaque .piece dans la zone de droite.
+
+    /----------------------------/
+    Sélecteurs
+    /----------------------------/
+
+    Grille : document.querySelector('.grid')
+
+    Toutes cellules : document.querySelectorAll('.cell')
+
+    Toutes pièces : document.querySelectorAll('.piece')
+
+    Compteur : document.querySelector('.stats .stat:nth-child(1) span') (tu peux mettre un id="counter" pour simplifier)
+
+    Chrono : id="timer"
+
+    Barre : document.querySelector('.progress__bar')
+
+    Boutons : querySelectorAll('.controls .btn') (ou id="new", id="help", id="pause")
+
+    Si tu veux, tu peux me dire et je te fournis une version de l’HTML avec id explicites déjà placés.
+
+
+/---------------------------------------------------------/
+ Choix / hypothèses déjà pris en compte
+/---------------------------------------------------------/
+
+    Typo laissée libre (sans-serif système), aucune dépendance externe.
+
+    Les pièces sont des <div> (plus pratique pour gérer background-position si tu utilises une image unique).
+
+    La grille est en CSS Grid (simple à manipuler).
+
+/---------------------------------------------------------/
+Problèmes connus / pistes de correction
+/---------------------------------------------------------/
+
+    “Police/alignement” sur “Pièces / Temps” :
+
+    Donne un id à ces champs et mets un style cohérent (ex. font-feature-settings: "tnum" 1; pour chiffres tabulaires sur Chrome/Firefox).
+
+    Exemple :
+
+    #counter, #timer { font-variant-numeric: tabular-nums; font-weight:600; }
+
+
+    Boutons pas encore parfaitement cohérents visuellement → réutiliser .btn--primary / .btn--secondary (déjà stylés).
+
+    Scroll des pièces : .pieces__grid a max-height + overflow:auto (ok), mais vérifier le rendu mobile.

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle 4x4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Puzzle 4x4</h1>
+    <p>Amusez-vous à faire ce puzzle de 16 pièces</p>
+  </header>
+
+  <main class="layout">
+    <!-- Colonne gauche -->
+    <aside class="sidebar left">
+      <div class="stat">Pièces placées : <span>0/16</span></div>
+      <div class="stat">Temps écoulé : <span>00:00</span></div>
+      <div class="reference">
+        <h2>Image de référence</h2>
+        <img src="image_ref.jpg" alt="Image de référence du puzzle">
+      </div>
+    </aside>
+
+    <!-- Zone centrale -->
+    <section class="board">
+      <h2>Grille de puzzle 4x4</h2>
+      <div class="grid">
+        <!-- Cases (16 au total) -->
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </section>
+
+    <!-- Colonne droite -->
+    <aside class="sidebar right">
+      <h2>Pièces à placer</h2>
+      <div class="pieces">
+        <!-- Pièces disponibles (visuellement vides pour l’instant) -->
+        <div class="piece"></div>
+        <div class="piece"></div>
+        <div class="piece"></div>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
