@@ -1,0 +1,17 @@
+{
+  "name": "projet-13-newsletter",
+  "version": "1.0.0",
+  "description": "Newsletter Projet 13 avec TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": ["newsletter", "typescript", "darkmode"],
+  "author": "Votre nom",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,86 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .logo h1 {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    font-weight: bold;
+    }
+
+    #backButton {
+    background-color: #293041;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  #backButton:hover {
+    background-color: #3a4150;
+    transform: scale(1.05);
+  }
+
+    /* Conteneur du formulaire */
+    #registerForm {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+    }
+
+    /* Inputs */
+    #registerForm input {
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    #registerForm input:focus {
+      border-color: #293041;
+      box-shadow: 0 0 5px rgba(41,48,65,0.5);
+      outline: none;
+    }
+
+    /* Bouton */
+    #registerForm button {
+      padding: 12px;
+      background-color: #293041;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    #registerForm button:hover {
+      background-color: #3a4150;
+      transform: scale(1.05);
+    }
+
+    #registerForm button:active {
+      transform: scale(0.95);
+    }
+
+    /* Responsive */
+    @media (max-width: 400px) {
+      #registerForm {
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }

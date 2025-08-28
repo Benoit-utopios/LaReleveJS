@@ -4,6 +4,7 @@
 
 - Création HTML/CSS
 - Création du JS, pour l'ajout des films à ajouter à la liste des souhaits
+-Migration du code en typescript
 
 ## Ce qui reste à faire / priorités
 

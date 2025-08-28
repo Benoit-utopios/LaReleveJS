@@ -1,0 +1,23 @@
+{
+  "name": "16",
+  "version": "1.0.0",
+  "description": "projet 16",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src --ext ts,js --exec ts-node src/app/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/app/index.js",
+    "clean": "rimraf dist || rm -rf dist",
+    "serve": "npx serve ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

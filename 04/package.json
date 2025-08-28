@@ -1,0 +1,21 @@
+{
+  "name": "04",
+  "version": "1.0.0",
+  "description": "(Brève description en 3–5 lignes. Qu’est-ce que ce projet ? Pour qui ?)",
+  "main": "script.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/fonction.js",
+    "dev": "ts-node src/index.ts",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

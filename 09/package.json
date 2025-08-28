@@ -1,0 +1,21 @@
+{
+  "name": "09",
+  "version": "1.0.0",
+  "description": "Movie Tracker est une application web qui permet à un utilisateur de gérer sa liste de films à voir et déjà vus. L’objectif est d’offrir une interface claire et agréable pour garder en mémoire les films que l’on souhaite regarder, et d’ajouter une dimension ludique en notant les films vus.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "ts-node src/script.ts",
+    "live": "ts-node-dev --respawn src/script.ts",
+    "watch": "tsc --watch"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Projet 13</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Newsletter Projet 13</h1>
+
+        <!-- Dark mode toggle -->
+        <div class="theme-toggle" title="Basculer clair/sombre">
+            <input type="checkbox" id="themeToggle" aria-label="Activer le mode sombre" />
+            <label for="themeToggle">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+                <span class="ball"></span>
+            </label>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="newsletter-container">
+            <h2 class="newsletter-title">
+                Envie de nouveautés et de mises à jour produits ?<br>
+                Inscrivez-vous à notre newsletter.
+            </h2>
+            <form class="newsletter-form" id="newsletterForm">
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email-input"
+                    placeholder="Entrez votre email" 
+                    required
+                >
+                <!-- Message -->
+                <p class="error-message" id="errorMessage">Veuillez entrer une adresse e-mail valide.</p>
+                <button type="submit" class="submit-btn">Souscription</button>
+            </form>
+            
+            <p class="privacy-text">
+                Vos données sont notre priorité. Consultez notre
+                <a href="privacy.html" class="privacy-link">politique de confidentialité</a>.
+            </p>
+        </div>
+    </main>
+
+    <!-- Modale de confirmation -->
+    <div class="modal-overlay" id="myModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn" aria-label="Fermer">&times;</button>
+            <p class="modal-text">
+                Votre adresse e-mail a bien été enregistrée, nous vous en remercions.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>Projet 13 - CDA M2i - 2025</p>
+    </footer>
+</body>
+</html>
