@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthBoard - Connexion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container active" id="loginPage">
+    <div class="login-card">
+      <h1 class="login-title">HealthBoard</h1>
+      <div class="success-message" id="successMessage"></div>
+      
+      <!-- Formulaire de connexion -->
+      <form id="loginForm" action="dashboard.html">
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Mot de passe</label>
+          <input type="password" id="password" class="form-input" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="loginBtn">
+          Se connecter
+        </button>
+      </form>
+
+      <div class="text-center">
+        <p>Pas encore de compte ? 
+          <a href="#" class="text-link" onclick="showRegister()">S'inscrire</a>
+        </p>
+      </div>
+
+      <!-- Formulaire d'inscription -->
+      <form id="registerForm" style="display: none;">
+        <div class="form-group">
+          <label for="regName" class="form-label">Nom complet</label>
+          <input type="text" id="regName" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" id="regEmail" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="regPassword" class="form-label">Mot de passe</label>
+          <input type="password" id="regPassword" class="form-input" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Créer un compte
+        </button>
+      </form>
+
+      <div class="text-center" id="backToLogin" style="display: none;">
+        <p>Déjà un compte ? 
+          <a href="#" class="text-link" onclick="showLogin()">Se connecter</a>
+        </p>
+      </div>
+    </div>
+  </div>
+    <!-- JS POUR GÉRER LOGIN/REGISTER -->
+  <script src="script.js"></script>
+  <!-- Le script doit gérer :
+       - showRegister() pour afficher le formulaire d'inscription
+       - showLogin() pour revenir au login
+       - Validation et redirection après login/inscription -->
+</body>
+</html>

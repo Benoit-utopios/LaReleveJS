@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBoard - Profil </title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">HealthBoard</h1>
+      <div class="user-info">
+        <span id="userName">Jean Dupont</span>
+        <div class="avatar" id="userAvatar">JD</div>
+        <a href="index.html" class="btn btn-secondary">Déconnexion</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <div class="nav-item active"><a href="dashboard.html">Tableau de bord</a></div>
+      <div class="nav-item"><a href="details.html">Données détaillées</a></div>
+      <div class="nav-item"><a href="profile.html">Profil utilisateur</a></div>
+    </div>
+  </nav>
+
+<!-- Contenu Profil -->
+  <div class="container">
+    <h2 style="margin-bottom: 2rem; color: var(--primary);">Profil utilisateur</h2>
+
+    <!-- Informations utilisateur -->
+    <div class="profile-section">
+      <div class="profile-header">
+        <div class="profile-avatar">JD</div>
+        <div class="profile-info">
+          <h2 id="profileName">Jean Dupont</h2>
+          <p id="profileEmail">jean.dupont@email.com</p>
+          <p style="color: var(--gray); margin-top: 0.5rem;">Membre depuis janvier 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Objectifs -->
+    <div class="profile-section">
+      <h3 class="card-title">Objectifs personnalisés</h3>
+      <div class="goals-grid">
+        <div class="goal-item"><div class="goal-label">Objectif pas/jour</div><div class="goal-value">10,000</div></div>
+        <div class="goal-item"><div class="goal-label">Objectif sommeil</div><div class="goal-value">8h 00m</div></div>
+        <div class="goal-item"><div class="goal-label">Objectif productivité</div><div class="goal-value">85%</div></div>
+        <div class="goal-item"><div class="goal-label">Sessions sport/semaine</div><div class="goal-value">3</div></div>
+      </div>
+    </div>
+
+    <!-- Statistiques -->
+    <div class="profile-section">
+      <h3 class="card-title">Statistiques globales</h3>
+      <div class="goals-grid">
+        <div class="goal-item"><div class="goal-label">Moyenne pas/jour</div><div class="goal-value">9,186</div></div>
+        <div class="goal-item"><div class="goal-label">Moyenne sommeil</div><div class="goal-value">7h 30m</div></div>
+        <div class="goal-item"><div class="goal-label">Score productivité moyen</div><div class="goal-value">79%</div></div>
+        <div class="goal-item"><div class="goal-label">Jours actifs ce mois</div><div class="goal-value">28</div></div>
+      </div>
+    </div>
+  </div>
+    <!-- JS POUR INTERACTIONS PROFIL -->
+  <script src="script.js"></script>
+  <!-- Le script peut gérer :
+       - Modification du profil
+       - Mise à jour des objectifs
+       - Affichage dynamique des statistiques -->
+</body>
+</html>

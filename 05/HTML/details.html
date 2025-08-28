@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBoard - Données détaillées</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">HealthBoard</h1>
+      <div class="user-info">
+        <span id="userName">Jean Dupont</span>
+        <div class="avatar" id="userAvatar">JD</div>
+        <a href="index.html" class="btn btn-secondary">Déconnexion</a>
+      </div>
+    </div>
+  </header>
+
+    <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <div class="nav-item active"><a href="dashboard.html">Tableau de bord</a></div>
+      <div class="nav-item"><a href="details.html">Données détaillées</a></div>
+      <div class="nav-item"><a href="profile.html">Profil utilisateur</a></div>
+    </div>
+  </nav>
+ <!-- Contenu Données détaillées -->
+  <div class="container">
+    <h2 style="margin-bottom: 2rem; color: var(--primary);">Données détaillées</h2>
+
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Jour</th>
+            <th>Pas</th>
+            <th>Sommeil</th>
+            <th>Activité principale</th>
+            <th>Score productivité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Lundi 26 Août</td><td>7,800</td><td>6h 30m</td><td>Travail</td><td>75%</td></tr>
+          <tr><td>Mardi 27 Août</td><td>9,200</td><td>8h 10m</td><td>Travail</td><td>85%</td></tr>
+          <tr><td>Mercredi 28 Août</td><td>10,300</td><td>7h 45m</td><td>Sport</td><td>90%</td></tr>
+          <tr><td>Jeudi 29 Août</td><td>6,500</td><td>6h 50m</td><td>Travail</td><td>70%</td></tr>
+          <tr><td>Vendredi 30 Août</td><td>8,000</td><td>7h 20m</td><td>Repos</td><td>65%</td></tr>
+          <tr><td>Samedi 31 Août</td><td>12,000</td><td>8h 00m</td><td>Sport</td><td>95%</td></tr>
+          <tr><td>Dimanche 1 Sept</td><td>11,500</td><td>7h 55m</td><td>Repos</td><td>80%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+  <!-- JS POUR INTERACTIONS TABLE DETAILS -->
+  <script src="script.js"></script>
+  <!-- Le script peut gérer :
+       - Filtres de date
+       - Tri des colonnes
+       - Éventuelles interactions -->
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthBoard - Tableau de bord</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">HealthBoard</h1>
+      <div class="user-info">
+        <span id="userName">Jean Dupont</span>
+        <div class="avatar" id="userAvatar">JD</div>
+        <a href="index.html" class="btn btn-secondary">Déconnexion</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <div class="nav-item active"><a href="dashboard.html">Tableau de bord</a></div>
+      <div class="nav-item"><a href="details.html">Données détaillées</a></div>
+      <div class="nav-item"><a href="profile.html">Profil utilisateur</a></div>
+    </div>
+  </nav>
+
+  <!-- Contenu Dashboard -->
+  <div class="container">
+    <h2 style="margin-bottom: 2rem; color: var(--primary);">Tableau de bord</h2>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">8,750</div>
+        <div class="stat-label">Pas aujourd'hui</div>
+        <div class="stat-change positive">+12% vs hier</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">7h 30m</div>
+        <div class="stat-label">Sommeil moyenne</div>
+        <div class="stat-change positive">+0h 15m vs semaine</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">78%</div>
+        <div class="stat-label">Score productivité</div>
+        <div class="stat-change negative">-5% vs hier</div>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="card">
+        <h3 class="card-title">Évolution du sommeil (7 jours)</h3>
+        <div class="chart-container"><canvas id="sleepChart"></canvas></div>
+      </div>
+      
+      <div class="card">
+        <h3 class="card-title">Pas quotidiens</h3>
+        <div class="chart-container"><canvas id="stepsChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Répartition des activités hebdomadaires</h3>
+      <div class="chart-container"><canvas id="activitiesChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- JS POUR CHARTS ET INTERACTIONS DASHBOARD -->
+  <script src="script.js"></script>
+  <!-- Le script doit gérer :
+       - Initialisation des graphiques Chart.js (pour : sleepChart, stepsChart, activitiesChart)
+       - Données dynamiques
+       - Interactions éventuelles -->
+</body>
+</html>
